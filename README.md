@@ -4,7 +4,7 @@
 
 #### Remote Desktop
 
-En juin 2022, l'interface d'examen a été modifiée passant d'un terminal à distance à un bureau à distance (Ubuntu XFCE). Vous n'êtes autorisé à utiliser que le navigateur Firefox à l'intérieur du bureau à distance pour accéder à la documentation K8s, et non votre navigateur local. Si vous venez d'OSX/Windows, il y aura des changements au niveau du copier-coller. Nous avons rédigé un article décrivant la nouvelle interface utilisateur, et la Linux Foundation a publié une mise à jour. Il existe également un environnement de test (playground) qui vous permet de tester une interface similaire.
+En juin 2022, l'interface d'examen a été modifiée passant d'un terminal à distance à un bureau à distance (Ubuntu XFCE). Vous n'êtes autorisé à utiliser que le navigateur Firefox à l'intérieur du bureau à distance pour accéder à la documentation K8s, et non votre navigateur local. Si vous venez de macOS/Windows, il y aura des changements au niveau du copier-coller. Nous avons rédigé un article décrivant la nouvelle interface utilisateur, et la Linux Foundation a publié une mise à jour. Il existe également un environnement de test (playground) qui vous permet de tester une interface similaire.
 
 Il existe toujours des différences entre les vrais examens et les simulateurs, notamment :
 
@@ -26,6 +26,13 @@ certification passée sur un moniteur 3440*1440 (pas de gros lags)
 * ne pas parler / bouger les lèvres
 * ne pas mettre la main devant la bouche
 * Utiliser vim dans une fenêtre comme bloc-note
+
+---
+
+#### VM (gain d'espace)
+
+* Passer à 70% la taille du texte et de l'interface Ubuntu XFCE
+* Penser à réduire la header bar 
 
 ---
 
@@ -105,7 +112,7 @@ k delete pod nginx --wait=false
 ```
 
 
-Pour les services favoriser la commande **expose** (avec l'option --type) plutôt que de chercher un fichier yaml sur kubernetes.io/docs
+Pour les services, favoriser la commande **expose** (avec l'option --type) plutôt que de chercher un fichier yaml sur kubernetes.io/docs
 
 ```shell
 k expose deploy nginx --type='ClusterIP/NodePort/LoadBalancer/ExternalName'  
@@ -121,9 +128,7 @@ NAME      CONTROLLER                      PARAMETERS   AGE
 traefik   traefik.io/ingress-controller   <none>       8d
 ```
 
----
-
-##### Faire des Recherches
+##### Faire des recherches
 
 Utilisez les lignes de commande plutôt que de rechercher dans firefox. ex:
 
